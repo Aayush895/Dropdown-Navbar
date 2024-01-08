@@ -1,39 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  Features
-  Company
-  Careers
-  About
+  <!-- Navigation Bar -->
+  <nav>
+    <div id="nav-items">
+      <div id="nav-logo">
+        <img src="/images/logo.svg" alt="logo">
+      </div>
 
-  Login
-  Register
+      <ul class="items">
+        <li class="features">Features <img src="/images/icon-arrow-down.svg"></li>
+        <li class="company">Company <img src="/images/icon-arrow-down.svg"></li>
+        <li>Careers</li>
+        <li>About</li>
+      </ul>
+    </div>
 
-  Make remote work
+    <div id="registeration">
+      <p>Login</p>
+      <button>Register</button>
+    </div>
+  </nav>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+  <!-- Header -->
 
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div id="header">
+
+    <div class="header-content">
+
+      <h1>Make remote work</h1>
+      <p>
+        Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
+
+      <button>Learn more</button>
+
+      <div id="clients">
+        <img src="/images/client-databiz.svg" alt="client">
+        <img src="/images/client-audiophile.svg" alt="client">
+        <img src="/images/client-meet.svg" alt="client">
+        <img src="/images/client-maker.svg" alt="client">
+      </div>
+
+    </div>
+
+    <div id="hero">
+      <img src="/images/image-hero-desktop.png" alt="hero">
+    </div>
+
   </div>
+
+  <div id="features-dropdown">
+    <p><img src="/images/icon-todo.svg" alt=""> Todo List</p>
+    <p><img src="/images/icon-calendar.svg" alt=""> Calendar</p>
+    <p><img src="/images/icon-reminders.svg" alt=""> Reminders</p>
+    <p><img src="/images/icon-planning.svg" alt=""> Planning</p>
+  </div>
+
+  <div id="company-dropdown">
+    <p>History</p>
+    <p>Our Team</p>
+    <p>Blog</p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
