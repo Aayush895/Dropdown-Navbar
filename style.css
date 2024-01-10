@@ -189,3 +189,137 @@ nav {
   margin: 1rem 0rem;
   color: var(--Medium-Gray);
 }
+
+/* Responsive navigation */
+#mobile-nav {
+  display: none;
+}
+
+#mobile-nav-logo > img {
+  cursor: pointer;
+}
+
+.mobile-nav-bar {
+  position: absolute;
+  padding: 1rem 2rem;
+  right: 0rem;
+  top: 0rem;
+  background-color: var(--Almost-White);
+  animation: expand-nav 0.2s ease-in forwards;
+  color: var(--Medium-Gray);
+  height: 100vh;
+  display: none;
+}
+
+@keyframes expand-nav {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+#close-nav {
+  text-align: right;
+  margin-bottom: 4rem;
+  cursor: pointer;
+}
+
+.mobile-nav-items {
+  list-style: none;
+}
+
+.mobile-nav-items > li {
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.mobile-nav-items > li:hover {
+  color: var(--Almost-Black);
+}
+
+#mobile-registeration {
+  text-align: center;
+}
+
+#mobile-registeration > p {
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+#mobile-registeration > p:hover {
+  color: var(--Almost-Black);
+}
+
+#mobile-registeration > button {
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid;
+  font-family: 'Epilogue', sans-serif;
+  background-color: transparent;
+  color: var(--Medium-Gray);
+  cursor: pointer;
+  width: 100%;
+}
+
+#mobile-registeration > button:hover {
+  color: var(--Almost-Black);
+}
+
+@media (max-width: 428px) {
+  nav {
+    margin-bottom: 0.5rem;
+  }
+
+  .items {
+    display: none;
+  }
+
+  #registeration {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: block;
+  }
+
+  #header {
+    flex-direction: column-reverse;
+  }
+
+  .header-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .header-content > h1 {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+
+  .header-content > p {
+    text-align: center;
+    width: 100%;
+  }
+
+  .header-content > button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #hero {
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  #clients {
+    text-align: center;
+  }
+
+  #clients > img {
+    width: 20%;
+    padding: 0rem 0.5rem;
+  }
+}
