@@ -284,6 +284,33 @@ nav {
     display: block;
   }
 
+  .mobile-features > ul {
+    margin-top: 2rem;
+    list-style: none;
+    display: none;
+  }
+
+  .mobile-features > ul > li {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    cursor: pointer;
+  }
+
+  .mobile-features > ul > li:hover {
+    color: var(--Almost-Black);
+  }
+
+  .mobile-company > ul {
+    list-style: none;
+    margin-top: 2rem;
+    display: none;
+  }
+
+  .mobile-company > ul > li {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+  }
+
   #header {
     flex-direction: column-reverse;
   }

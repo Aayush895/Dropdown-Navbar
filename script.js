@@ -5,6 +5,18 @@ const companyDropdown = document.getElementById('company-dropdown')
 const navLogo = document.getElementById('mobile-nav-logo')
 const closeNav = document.getElementById('close-nav').querySelector('img')
 const heroImg = document.getElementById('hero').querySelector('img')
+const mobileFeature = document
+  .querySelector('.mobile-features')
+  .querySelector('p')
+const mobileFeatureDropdown = document
+  .querySelector('.mobile-features')
+  .querySelector('ul')
+const mobileCompany = document
+  .querySelector('.mobile-company')
+  .querySelector('p')
+const mobileCompanyDropdown = document
+  .querySelector('.mobile-company')
+  .querySelector('ul')
 
 features.addEventListener('click', () => {
   if (features.querySelector('img').src.includes('down')) {
@@ -13,6 +25,16 @@ features.addEventListener('click', () => {
   } else {
     features.querySelector('img').src = '/images/icon-arrow-down.svg'
     featureDropdown.style.visibility = 'hidden'
+  }
+})
+
+mobileFeature.addEventListener('click', () => {
+  if(mobileFeature.querySelector('img').src.includes('down')) {
+    mobileFeature.querySelector('img').src = '/images/icon-arrow-up.svg'
+    mobileFeatureDropdown.style.display = 'block'
+  } else {
+    mobileFeature.querySelector('img').src = '/images/icon-arrow-down.svg'
+    mobileFeatureDropdown.style.display = 'none'
   }
 })
 
@@ -26,6 +48,16 @@ company.addEventListener('click', () => {
   }
 })
 
+mobileCompany.addEventListener('click', () => {
+  if (mobileCompany.querySelector('img').src.includes('down')) {
+    mobileCompany.querySelector('img').src = '/images/icon-arrow-up.svg'
+    mobileCompanyDropdown.style.display = 'block'
+  } else {
+    mobileCompany.querySelector('img').src = '/images/icon-arrow-down.svg'
+    mobileCompanyDropdown.style.display = 'none'
+  }
+})
+
 navLogo.addEventListener('click', () => {
   document.querySelector('.mobile-nav-bar').style.display = 'block'
   document.body.style.overflowY = 'hidden'
@@ -35,9 +67,9 @@ navLogo.addEventListener('click', () => {
 closeNav.addEventListener('click', () => {
   document.querySelector('.mobile-nav-bar').style.display = 'none'
   document.body.style.overflowY = 'visible'
+  document.body.style.backgroundColor = 'hsl(0, 0%, 98%)'
 })
 
-
-if(window.innerWidth <= 428) {
+if (window.innerWidth <= 428) {
   heroImg.src = 'images/image-hero-mobile.png'
 }
